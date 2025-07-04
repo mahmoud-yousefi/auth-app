@@ -9,6 +9,8 @@
   font-family: var(--font-geist-sans);
   font-weight: 500;
   transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
     background: linear-gradient(90deg, #0056b3, #003d82);

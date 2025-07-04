@@ -6,13 +6,14 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   error?: string;
+  type?: 'text' | 'password';
 }
 
-const Input: React.FC<InputProps> = ({ value, onChange, placeholder, error }) => {
+const Input: React.FC<InputProps> = ({ value, onChange, placeholder, error, type }) => {
   return (
     <div className={styles.inputContainer}>
       <input
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         placeholder={placeholder}

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { getUserFromLocalStorage } from '../utils/auth';
+import { getUserFromLocalStorage } from '@/utils/auth';
 
 export default function Home() {
   const router = useRouter();

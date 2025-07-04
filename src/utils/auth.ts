@@ -1,4 +1,4 @@
-import { User } from '../types/user';
+import { User } from '@/types/user';
 
 export const saveUserToLocalStorage = (user: User) => {
   if (typeof window !== 'undefined') {
