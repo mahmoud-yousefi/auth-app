@@ -1,0 +1,28 @@
+.button {
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-geist-sans);
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #0056b3, #003d82);
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
