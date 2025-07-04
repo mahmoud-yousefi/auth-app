@@ -14,7 +14,7 @@ const DashboardPage: React.FC = () => {
   useEffect(() => {
     const user = getUserFromLocalStorage();
     if (!user) {
-      router.push('/auth');
+      router.push('/auth-app/auth');
     }
   }, [router]);
 
@@ -22,7 +22,7 @@ const DashboardPage: React.FC = () => {
 
   const handleLogout = () => {
     clearUserFromLocalStorage();
-    router.push('/auth');
+    router.push('/auth-app/auth');
   };
 
   return (
