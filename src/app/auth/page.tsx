@@ -51,7 +51,7 @@ const AuthPage: React.FC = () => {
 
       saveUserToLocalStorage(user);
       setSuccess('ورود با موفقیت انجام شد! در حال انتقال...');
-      setTimeout(() => router.push('/auth-app/dashboard'), 1000);
+      setTimeout(() => router.push('/dashboard'), 1000);
     } catch (error) {
       setError('خطا در ارتباط با سرور');
       console.log(error);

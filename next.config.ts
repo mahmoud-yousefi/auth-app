@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production';
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
   output: 'export',
-  basePath: '/auth-app'
+  basePath: isProd ? '/auth-app' : '',
+  assetPrefix: isProd ? '/auth-app/' : '',
+  images: { unoptimized: true },
+  reactStrictMode: true,
 };
-
-export default nextConfig;
+module.exports = nextConfig;

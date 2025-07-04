@@ -14,7 +14,7 @@ const DashboardPage: React.FC = () => {
   useEffect(() => {
     const user = getUserFromLocalStorage();
     if (!user) {
-      router.push('/auth-app/auth');
+      router.push('/auth');
     }
   }, [router]);
 
@@ -22,7 +22,7 @@ const DashboardPage: React.FC = () => {
 
   const handleLogout = () => {
     clearUserFromLocalStorage();
-    router.push('/auth-app/auth');
+    router.push('/auth');
   };
 
   return (
@@ -32,7 +32,7 @@ const DashboardPage: React.FC = () => {
         {user && (
           <div className={styles.profile}>
             <Image
-              src={user.picture?.large || '/default-avatar.png'}
+              src={`/auth-app/${user.picture?.large || '/default-avatar.png'}`}
               alt={`${user.name.first} ${user.name.last}`}
               width={100}
               height={100}

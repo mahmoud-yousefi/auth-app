@@ -10,9 +10,9 @@ export default function Home() {
   useEffect(() => {
     const user = getUserFromLocalStorage();
     if (user) {
-      router.push('/auth-app/dashboard');
+      router.push('/dashboard');
     } else {
-      router.push('/auth-app/auth');
+      router.push('/auth');
     }
   }, [router]);
 
