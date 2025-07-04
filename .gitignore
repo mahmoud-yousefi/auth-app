@@ -9,7 +9,6 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-out
 
 # testing
 /coverage
@@ -40,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+public
+src
+eslint.config.mjs
+next.config.ts
+next-env.d.ts
+package.json
+README.md
+yarn.lock
+tsconfig.json
