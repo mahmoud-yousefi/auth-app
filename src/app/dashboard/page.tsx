@@ -32,7 +32,7 @@ const DashboardPage: React.FC = () => {
         {user && (
           <div className={styles.profile}>
             <Image
-              src={`/auth-app/${user.picture?.large || '/default-avatar.png'}`}
+              src={user.picture?.large || '/default-avatar.png'}
               alt={`${user.name.first} ${user.name.last}`}
               width={100}
               height={100}
